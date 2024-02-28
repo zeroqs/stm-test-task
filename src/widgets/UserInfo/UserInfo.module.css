@@ -1,0 +1,17 @@
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+.user_image {
+    border-radius: 50%;
+    width: 150px;
+}

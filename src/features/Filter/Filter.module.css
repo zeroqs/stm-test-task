@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 10px 40px 0px 40px;
+
+    flex-wrap: wrap;
+}
+
+
+.input {
+    padding: 10px 7px;
+    border: 1px solid #878787;
+    border-radius: 10px;
+    flex: 0 1 70%;
+}
+
+.button {
+    padding: 10px 7px;
+    border: 1px solid #878787;
+    border-radius: 10px;
+}

@@ -1,0 +1,17 @@
+.wrapper {
+    position: relative;
+
+     &:hover {
+        .tooltip {
+            display: block;
+        }
+    } 
+}
+
+.tooltip {
+    position: absolute;
+    right: -90%;
+    top: 0; 
+
+    display: none;
+}

@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.user_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.avatar {
+    border-radius: 50%;
+    align-self: center;
+}
+
+.card {
+    padding: 20px;
+    color: #3A3541;
+    background-color: rgb(238, 241, 247);
+    border-radius: 6px;
+
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .user_info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user_info {
+    grid-template-columns: 1fr; 
+  }
+}
