@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { Filter } from '@/features/Filter/Filter'
 import { useFetch } from '@/shared/hooks/useFetch'
 import { ResponseUserGet } from '@/shared/types'
@@ -7,6 +9,10 @@ const Home = () => {
   const { data, isLoading, isError, error } = useFetch<ResponseUserGet>({
     endpoint: 'https://randomuser.me/api/?results=15',
   })
+
+  useEffect(() => {
+    document.title = 'Главная'
+  }, [])
 
   return (
     <>

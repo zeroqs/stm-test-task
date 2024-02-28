@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { useFetch } from '@/shared/hooks/useFetch'
@@ -10,6 +11,14 @@ const UserPage = () => {
   const { data, isLoading, isError, error } = useFetch<ResponseUserGet>({
     endpoint: `https://randomuser.me/api/?id=${userId}`,
   })
+
+  useEffect(() => {
+    if (data) {
+      const user = data.results[0]
+      const title = `${user.name.first} ${user.name.last}`
+      document.title = title
+    }
+  }, [data])
 
   return (
     <>
